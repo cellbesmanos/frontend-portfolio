@@ -96,6 +96,11 @@ p {
   gap: var(--gap, 1.6rem);
 }
 
+.grid-container {
+  display: grid;
+  place-items: center;
+}
+
 .container {
   max-width: 128rem;
   margin-inline: auto;
@@ -188,3 +193,13 @@ p {
     backdrop-filter: blur(4rem);
   }
 } */
+
+/* grid layout */
+
+.grid-container--home {
+  row-gap: 5.6rem;
+}
+
+.grid-container--home > * {
+  max-width: 55ch;
+}
