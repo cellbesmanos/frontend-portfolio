@@ -1,8 +1,11 @@
+import Home from "./routes/home/Home";
+import "./App.css";
+
 function App() {
   return (
-    <main>
-      <h1>Hello World!</h1>
-    </main>
+    <div className="App container">
+      <Home />
+    </div>
   );
 }
 
