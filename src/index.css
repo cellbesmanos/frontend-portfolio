@@ -106,6 +106,10 @@ p {
   display: none;
 }
 
+.block {
+  display: block;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
