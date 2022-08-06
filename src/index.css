@@ -3,7 +3,10 @@
   --clr-white: 0 0% 100%;
   --clr-gray: 0, 0%, 80%;
 
-  --fs-400: 1.6rem;
+  --fs-300: 1.8rem;
+  --fs-400: 2rem;
+  --fs-500: 3.2rem;
+  --fs-600: 6.4rem;
 
   --ff-sans: "Montserrat", sans-serif;
 
@@ -125,6 +128,18 @@ p {
 
 .underline {
   text-decoration: underline;
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
 }
 
 .fw-500 {
