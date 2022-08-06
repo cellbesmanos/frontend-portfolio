@@ -1,4 +1,5 @@
 import React from "react";
+import Socials from "../../components/socials/Socials";
 import "./Home.css";
 
 export default function Home() {
@@ -28,39 +29,7 @@ export default function Home() {
         </a>
       </article>
 
-      <div>
-        <p>
-          or <span className="sr-only">visit my other social links</span>
-        </p>
-
-        <div className="flex">
-          <a
-            href="https://github.com/cellbesmanos"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="my github profile"
-          >
-            <img
-              aria-hidden="true"
-              src="/assets/logos/github-logo.svg"
-              alt="github logo"
-            />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/cellbesmanos/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="my linkedin profile"
-          >
-            <img
-              aria-hidden="true"
-              src="/assets/logos/linkedin-logo.svg"
-              alt="linkedin logo"
-            />
-          </a>
-        </div>
-      </div>
+      <Socials />
     </main>
   );
 }

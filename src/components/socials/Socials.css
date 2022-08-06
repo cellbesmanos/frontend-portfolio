@@ -1,0 +1,10 @@
+.Socials {
+  justify-self: stretch;
+}
+
+.Socials__icons {
+  padding-top: 2.4rem;
+  border-top: 1px solid hsl(var(--clr-white));
+
+  justify-content: center;
+}
