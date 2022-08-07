@@ -1,0 +1,23 @@
+.ProjectControl[role="tab"] {
+  --size: clamp(1.2rem, 2vw, 1.5rem);
+
+  width: var(--size);
+
+  border-radius: 50%;
+  border: unset;
+  background-color: hsl(var(--clr-gray));
+
+  aspect-ratio: 1;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.ProjectControl:hover,
+.ProjectControl:focus {
+  opacity: 1;
+}
+
+.ProjectControl[aria-selected="true"] {
+  background-color: hsl(var(--clr-white));
+  opacity: 1;
+}

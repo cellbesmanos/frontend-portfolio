@@ -231,7 +231,7 @@ p {
   grid-area: project;
 }
 
-.grid-container--projects > .Project-controls {
+.grid-container--projects > .ProjectControls {
   grid-area: controls;
 }
 

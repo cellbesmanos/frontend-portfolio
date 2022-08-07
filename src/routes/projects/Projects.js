@@ -1,5 +1,6 @@
 import React from "react";
 
+import ProjectControls from "../../components/project-controls/ProjectControls";
 import Socials from "../../components/socials/Socials";
 import "./Projects.css";
 
@@ -45,21 +46,7 @@ export default function Projects() {
         </section>
       </article>
 
-      <div
-        className="Project-controls flex"
-        aria-label="projects list"
-        role="tablist"
-      >
-        <button role="tab">
-          <span className="sr-only">description here</span>
-        </button>
-        <button role="tab">
-          <span className="sr-only">description here</span>
-        </button>
-        <button role="tab">
-          <span className="sr-only">description here</span>
-        </button>
-      </div>
+      <ProjectControls />
 
       <Socials />
     </main>
