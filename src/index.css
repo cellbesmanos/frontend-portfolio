@@ -223,7 +223,7 @@ p {
   align-content: start;
 }
 
-.grid-container--projects > .Project-image {
+.grid-container--projects > .ProjectImage {
   grid-area: image;
 }
 

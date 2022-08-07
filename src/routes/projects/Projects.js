@@ -1,5 +1,6 @@
 import React from "react";
 
+import ProjectImage from "../../components/project-image/ProjectImage";
 import ProjectControls from "../../components/project-controls/ProjectControls";
 import Socials from "../../components/socials/Socials";
 import "./Projects.css";
@@ -7,12 +8,7 @@ import "./Projects.css";
 export default function Projects() {
   return (
     <main className="Projects grid-container grid-container--projects">
-      <div className="Project-image">
-        <img
-          src="/assets/images/desktop-preview.jpg"
-          alt="loopstudios desktop preview"
-        />
-      </div>
+      <ProjectImage url={"/assets/images/desktop-preview.jpg"} />
 
       <article className="Project flow">
         <header className="flow">
