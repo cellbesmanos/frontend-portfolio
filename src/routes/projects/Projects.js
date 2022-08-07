@@ -4,43 +4,25 @@ import ProjectImage from "../../components/project-image/ProjectImage";
 import ProjectControls from "../../components/project-controls/ProjectControls";
 import Socials from "../../components/socials/Socials";
 import "./Projects.css";
+import Project from "../../components/project/Project";
 
 export default function Projects() {
   return (
     <main className="Projects grid-container grid-container--projects">
       <ProjectImage url={"/assets/images/desktop-preview.jpg"} />
 
-      <article className="Project flow">
-        <header className="flow">
-          <h1 className="text-gradient fw-600 fs-600 letter-spacing-1">
-            Loopstudios Landing Page
-          </h1>
-          <p className="letter-spacing-3">
-            A challenge from Frontend Mentor. This projects test someone’s
-            knowledge of fundamental HTML and CSS concepts.
-          </p>
-        </header>
-
-        <section className="flow">
-          <h2 className="uppercase fw-500 letter-spacing-1">
-            Technologies used:
-          </h2>
-
-          <p className="letter-spacing-3">HTML 5, CSS 3, Javascript</p>
-        </section>
-
-        <section className="flow">
-          <h3 className="uppercase text-white fw-600 letter-spacing-1">
-            Highlights
-          </h3>
-
-          <ul className="letter-spacing-3">
-            <li>Lazy loading images through Intersection Observer</li>
-            <li>Handling data from an API asynchronously</li>
-            <li>React Hooks</li>
-          </ul>
-        </section>
-      </article>
+      <Project
+        title={"Loopstudios Landing Page"}
+        description={
+          "A challenge from Frontend Mentor. This projects test someone’s knowledge of fundamental HTML and CSS concepts."
+        }
+        technologies={["HTML 5", "CSS 3", "Javascript"]}
+        highlights={[
+          "Lazy loading images through Intersection Observer",
+          "Handling data from an API asynchronously",
+          "React Hooks",
+        ]}
+      />
 
       <ProjectControls />
 

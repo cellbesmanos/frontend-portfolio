@@ -229,6 +229,8 @@ p {
 
 .grid-container--projects > .Project {
   grid-area: project;
+
+  justify-self: start;
 }
 
 .grid-container--projects > .ProjectControls {

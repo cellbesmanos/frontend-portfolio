@@ -1,0 +1,16 @@
+.Project {
+  --flow-space: 3.2rem;
+}
+
+.Project > header > * {
+  --flow-space: clamp(2rem, 2vw, 2.4rem);
+}
+
+.Project > section > * {
+  --flow-space: clamp(0.4rem, 1vw, 0.8rem);
+}
+
+.Project__highlights > ul > * {
+  --flow-space: 0.2rem;
+  margin-inline-start: 1.6rem;
+}
