@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Socials from "../../components/socials/Socials";
 import "./Home.css";
 
@@ -21,12 +23,12 @@ export default function Home() {
           similique.
         </p>
 
-        <a
-          href="/#"
+        <Link
+          to="/projects"
           className="block uppercase fw-600 letter-spacing-1 text-gradient"
         >
           View projects
-        </a>
+        </Link>
       </article>
 
       <Socials />

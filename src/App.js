@@ -1,10 +1,11 @@
-import Home from "./routes/home/Home";
+import { Outlet } from "react-router-dom";
+
 import "./App.css";
 
 function App() {
   return (
     <div className="App container">
-      <Home />
+      <Outlet />
     </div>
   );
 }
