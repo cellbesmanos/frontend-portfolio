@@ -6,14 +6,14 @@ import "./Projects.css";
 export default function Projects() {
   return (
     <main className="Projects grid-container grid-container--projects">
-      <div>
+      <div className="Project-image">
         <img
           src="/assets/images/desktop-preview.jpg"
           alt="loopstudios desktop preview"
         />
       </div>
 
-      <article className="flow">
+      <article className="Project flow">
         <header className="flow">
           <h1 className="text-gradient fw-600 fs-600 letter-spacing-1">
             Loopstudios Landing Page
@@ -46,7 +46,7 @@ export default function Projects() {
       </article>
 
       <div
-        className="Projects__controls"
+        className="Project-controls flex"
         aria-label="projects list"
         role="tablist"
       >

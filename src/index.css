@@ -206,6 +206,35 @@ p {
   row-gap: 5.6rem;
 }
 
-.grid-container--home > * {
+.grid-container--home > *,
+.grid-container--projects > * {
   max-width: 55ch;
+}
+
+.grid-container--projects {
+  grid-template-areas:
+    "image"
+    "controls"
+    "project"
+    "socials";
+  row-gap: 4.8rem;
+  padding-block: 6.4rem;
+  place-items: center;
+  align-content: start;
+}
+
+.grid-container--projects > .Project-image {
+  grid-area: image;
+}
+
+.grid-container--projects > .Project {
+  grid-area: project;
+}
+
+.grid-container--projects > .Project-controls {
+  grid-area: controls;
+}
+
+.grid-container--projects > .Socials {
+  grid-area: socials;
 }
