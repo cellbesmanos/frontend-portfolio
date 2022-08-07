@@ -1,12 +1,9 @@
 .Project {
-  --flow-space: 3.2rem;
+  --flow-space: 4rem;
   text-align: center;
 }
 
-.Project > header > * {
-  --flow-space: clamp(2rem, 2vw, 2.4rem);
-}
-
+.Project > header > *,
 .Project > section > * {
   --flow-space: clamp(0.4rem, 1vw, 0.8rem);
 }
