@@ -1,5 +1,6 @@
 .Project {
   --flow-space: 3.2rem;
+  text-align: center;
 }
 
 .Project > header > * {
@@ -10,7 +11,29 @@
   --flow-space: clamp(0.4rem, 1vw, 0.8rem);
 }
 
+.Project__highlights {
+  text-align: left;
+}
+
 .Project__highlights > ul > * {
   --flow-space: 0.2rem;
   margin-inline-start: 1.6rem;
+}
+
+.Project__links {
+  justify-content: center;
+}
+
+.Project__links a:last-child {
+  text-decoration: unset;
+}
+
+@media (min-width: 71.875em) {
+  .Project {
+    text-align: left;
+  }
+
+  .Project__links {
+    justify-content: flex-start;
+  }
 }

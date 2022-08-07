@@ -233,8 +233,6 @@ p {
 
 .grid-container--projects > .Project {
   grid-area: project;
-
-  justify-self: start;
 }
 
 .grid-container--projects > .ProjectControls {
@@ -261,6 +259,10 @@ p {
     column-gap: 6.4rem;
     padding-inline: 6.4rem;
     margin-top: clamp(3.2rem, 8vh, 6.4rem);
+  }
+
+  .grid-container--projects > .Project {
+    justify-self: start;
   }
 
   .grid-container--projects > .ProjectImage {

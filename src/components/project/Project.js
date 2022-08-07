@@ -29,7 +29,7 @@ export default function Project(props) {
       </section>
 
       <section className="Project__highlights flow">
-        <h3 className="uppercase text-white fw-600 letter-spacing-1">
+        <h3 className="uppercase text-white fw-500 letter-spacing-1">
           Highlights
         </h3>
 
@@ -39,6 +39,25 @@ export default function Project(props) {
             props.highlights.map((highlight) => <li>{highlight}</li>)) ||
             "No highlights included"}
         </ul>
+      </section>
+
+      <section className="Project__links flex">
+        <a
+          className="text-white letter-spacing-3"
+          href="/random"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub Repository
+        </a>
+        <a
+          className="text-white fw-600 letter-spacing-3"
+          href="/random"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Live Site
+        </a>
       </section>
     </article>
   );
