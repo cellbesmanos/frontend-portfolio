@@ -18,9 +18,11 @@ export default function Home() {
         </header>
 
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ab
-          ipsum tenetur nulla rerum ea, provident accusamus incidunt pariatur
-          similique.
+          I love cats, play games, read self-development books, and a big fan of
+          amazing animations! Did I mentioned that{" "}
+          <span className="linethrough">I love cats?</span> I am a{" "}
+          <span className="text-white fw-500">frontend developer</span> and love{" "}
+          <span className="text-white fw-500">accessible websites?</span>
         </p>
 
         <Link

@@ -147,6 +147,11 @@ p {
   text-decoration: underline;
 }
 
+.linethrough {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
 .fs-300 {
   font-size: var(--fs-300);
 }
