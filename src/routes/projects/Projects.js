@@ -10,7 +10,7 @@ export default function Projects() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    setSearchParams({ name: "project1", id: 1 });
+    setSearchParams({ name: "project1", id: 0 });
   }, [setSearchParams]);
 
   function updateActiveProject(id, name) {
@@ -23,9 +23,9 @@ export default function Projects() {
 
       <ProjectControls
         projects={[
+          { id: 0, title: "description" },
           { id: 1, title: "description" },
           { id: 2, title: "description" },
-          { id: 3, title: "description" },
         ]}
         activeProject={parseInt(searchParams.get("id"))}
         updateActiveProject={updateActiveProject}

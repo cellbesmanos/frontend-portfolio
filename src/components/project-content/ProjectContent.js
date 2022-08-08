@@ -3,7 +3,12 @@ import "./ProjectContent.css";
 
 export default function ProjectContent(props) {
   return (
-    <article className="Project flow">
+    <article
+      className="Project flow"
+      id={`project-${props.id}-tab`}
+      role="tabpanel"
+      tabIndex="0"
+    >
       <header className="flow">
         <h1 className="text-gradient fw-600 fs-600 letter-spacing-1">
           {props.title || "No title included"}
