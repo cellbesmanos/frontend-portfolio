@@ -1,5 +1,11 @@
 /* general reset */
 :root {
+  --linear-gradient: linear-gradient(
+    90deg,
+    #3bc57a 0%,
+    rgba(62, 224, 205, 0.7) 100%
+  );
+
   --clr-white: 0 0% 100%;
   --clr-gray: 0, 0%, 80%;
 
@@ -175,7 +181,7 @@ p {
 
 .text-gradient {
   color: transparent;
-  background: linear-gradient(90deg, #3bc57a 0%, rgba(62, 224, 205, 0.7) 100%);
+  background: var(--linear-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

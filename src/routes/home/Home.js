@@ -25,7 +25,7 @@ export default function Home() {
 
         <Link
           to="/projects"
-          className="block uppercase fw-600 letter-spacing-1 text-gradient"
+          className="Home__cta block uppercase fw-600 letter-spacing-1 text-gradient"
         >
           View projects
         </Link>
