@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./ProjectControls.css";
 
 export default function ProjectControls(props) {
-  const [focusedIndex, setFocusedIndex] = useState(props.activeProject);
+  const [focusedIndex, setFocusedIndex] = useState(0);
 
   useEffect(() => {
-    setFocusedIndex(props.activeProject);
+    // DO NOT REMOVE IF STATEMENT
+    // prevents the app from breaking when Projects route mounts for the first time
+    if (props.activeProject) {
+      setFocusedIndex(props.activeProject);
+    }
   }, [props.activeProject, setFocusedIndex]);
 
   useEffect(() => {
