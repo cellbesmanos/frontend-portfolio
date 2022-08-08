@@ -21,6 +21,34 @@
   justify-content: center;
 }
 
+.Project__links > a {
+  position: relative;
+  padding-bottom: 0.4rem;
+
+  text-decoration: none;
+}
+
+.Project__links > a::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+
+  width: 100%;
+  height: 0.1rem;
+
+  background-color: hsl(var(--clr-white));
+
+  content: "";
+  transition: transform 0.2s ease-in-out;
+}
+
+.Project__links > a:hover::after,
+.Project__links > a:focus::after {
+  transform: scaleX(1);
+}
+
 .Project__links a:last-child {
   text-decoration: unset;
 }
