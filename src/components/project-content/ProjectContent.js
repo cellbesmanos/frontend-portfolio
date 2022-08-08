@@ -26,7 +26,7 @@ export default function ProjectContent(props) {
         <p className="letter-spacing-3">
           {/* if technologies exist render technologies else render fallback */}
           {(props.technologies && props.technologies.join(", ")) ||
-            "No technologies included."}
+            "Hmm...there are no technologies?"}
         </p>
       </section>
 
@@ -38,25 +38,26 @@ export default function ProjectContent(props) {
         <ul className="letter-spacing-3 flow">
           {/* if highlights exist render highlights else render fallback */}
           {(props.highlights &&
-            props.highlights.map((highlight) => <li>{highlight}</li>)) ||
-            "No highlights included"}
+            props.highlights.map((highlight, index) => (
+              <li key={index}>{highlight}</li>
+            ))) || <p>Hmm...there are no highlights?</p>}
         </ul>
       </section>
 
       <section className="Project__links flex">
         <a
           className="text-white letter-spacing-3"
-          href="/random"
+          href={props.github || "/"}
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
         >
           GitHub Repository
         </a>
         <a
           className="text-white fw-600 letter-spacing-3"
-          href="/random"
+          href={props.url || "/"}
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
         >
           Visit Live Site
         </a>
