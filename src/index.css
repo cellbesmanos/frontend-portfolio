@@ -258,6 +258,11 @@ p {
   .grid-container--projects > .ProjectImage {
     max-width: 55rem;
   }
+
+  .grid-container--projects > .Socials {
+    justify-self: center;
+    width: 100%;
+  }
 }
 
 @media (min-width: 71.875em) {
@@ -285,7 +290,6 @@ p {
   }
 
   .grid-container--projects > .Socials {
-    justify-self: center;
     width: 48rem;
   }
 }

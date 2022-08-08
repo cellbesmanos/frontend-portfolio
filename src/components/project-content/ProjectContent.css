@@ -1,6 +1,5 @@
 .Project {
   --flow-space: 4rem;
-  text-align: center;
 }
 
 .Project > header > *,
@@ -15,10 +14,6 @@
 .Project__highlights > ul > * {
   --flow-space: 0.2rem;
   margin-inline-start: 1.6rem;
-}
-
-.Project__links {
-  justify-content: center;
 }
 
 .Project__links > a {
