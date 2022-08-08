@@ -1,64 +1,25 @@
 import React from "react";
-import "./Project.css";
 
-export default function Project(props) {
-  if (!props.technologies) {
-  }
+import ProjectImage from "../project-image/ProjectImage";
+import ProjectContent from "../project-content/ProjectContent";
 
+export default function Project() {
   return (
-    <article className="Project flow">
-      <header className="flow">
-        <h1 className="text-gradient fw-600 fs-600 letter-spacing-1">
-          {props.title || "No title included"}
-        </h1>
-        <p className="letter-spacing-3">
-          {props.description || "No description included"}
-        </p>
-      </header>
+    <>
+      <ProjectImage url={"/assets/images/desktop-preview.jpg"} />
 
-      <section className="flow">
-        <h2 className="uppercase fw-500 letter-spacing-1">
-          Technologies used:
-        </h2>
-
-        <p className="letter-spacing-3">
-          {/* if technologies exist render technologies else render fallback */}
-          {(props.technologies && props.technologies.join(", ")) ||
-            "No technologies included."}
-        </p>
-      </section>
-
-      <section className="Project__highlights flow">
-        <h3 className="uppercase text-white fw-500 letter-spacing-1">
-          Highlights
-        </h3>
-
-        <ul className="letter-spacing-3 flow">
-          {/* if highlights exist render highlights else render fallback */}
-          {(props.highlights &&
-            props.highlights.map((highlight) => <li>{highlight}</li>)) ||
-            "No highlights included"}
-        </ul>
-      </section>
-
-      <section className="Project__links flex">
-        <a
-          className="text-white letter-spacing-3"
-          href="/random"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub Repository
-        </a>
-        <a
-          className="text-white fw-600 letter-spacing-3"
-          href="/random"
-          target="_blank"
-          rel="noopener"
-        >
-          Visit Live Site
-        </a>
-      </section>
-    </article>
+      <ProjectContent
+        title={"Loopstudios Landing Page"}
+        description={
+          "A challenge from Frontend Mentor. This projects test someone’s knowledge of fundamental HTML and CSS concepts."
+        }
+        technologies={["HTML 5", "CSS 3", "Javascript"]}
+        highlights={[
+          "Lazy loading images through Intersection Observer",
+          "Handling data from an API asynchronously",
+          "React Hooks",
+        ]}
+      />
+    </>
   );
 }

@@ -1,30 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
-import ProjectImage from "../../components/project-image/ProjectImage";
 import ProjectControls from "../../components/project-controls/ProjectControls";
+import Project from "../../components/project/Project";
 import Socials from "../../components/socials/Socials";
 import "./Projects.css";
-import Project from "../../components/project/Project";
 
 export default function Projects() {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    setSearchParams({ name: "project1", id: 1 });
+  }, [setSearchParams]);
+
+  function updateActiveProject(id, name) {
+    setSearchParams({ name, id });
+  }
+
   return (
     <main className="Projects grid-container grid-container--projects">
-      <ProjectImage url={"/assets/images/desktop-preview.jpg"} />
+      <Project />
 
-      <Project
-        title={"Loopstudios Landing Page"}
-        description={
-          "A challenge from Frontend Mentor. This projects test someone’s knowledge of fundamental HTML and CSS concepts."
-        }
-        technologies={["HTML 5", "CSS 3", "Javascript"]}
-        highlights={[
-          "Lazy loading images through Intersection Observer",
-          "Handling data from an API asynchronously",
-          "React Hooks",
+      <ProjectControls
+        projects={[
+          { id: 1, title: "description" },
+          { id: 2, title: "description" },
+          { id: 3, title: "description" },
         ]}
+        activeProject={parseInt(searchParams.get("id"))}
+        updateActiveProject={updateActiveProject}
       />
-
-      <ProjectControls />
 
       <Socials />
     </main>

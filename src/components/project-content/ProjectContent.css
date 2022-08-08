@@ -1,0 +1,64 @@
+.Project {
+  --flow-space: 4rem;
+  text-align: center;
+}
+
+.Project > header > *,
+.Project > section > * {
+  --flow-space: clamp(0.4rem, 1vw, 0.8rem);
+}
+
+.Project__highlights {
+  text-align: left;
+}
+
+.Project__highlights > ul > * {
+  --flow-space: 0.2rem;
+  margin-inline-start: 1.6rem;
+}
+
+.Project__links {
+  justify-content: center;
+}
+
+.Project__links > a {
+  position: relative;
+  padding-bottom: 0.4rem;
+
+  text-decoration: none;
+}
+
+.Project__links > a::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+
+  width: 100%;
+  height: 0.1rem;
+
+  background-color: hsl(var(--clr-white));
+
+  content: "";
+  transition: transform 0.2s ease-in-out;
+}
+
+.Project__links > a:hover::after,
+.Project__links > a:focus::after {
+  transform: scaleX(1);
+}
+
+.Project__links a:last-child {
+  text-decoration: unset;
+}
+
+@media (min-width: 71.875em) {
+  .Project {
+    text-align: left;
+  }
+
+  .Project__links {
+    justify-content: flex-start;
+  }
+}
