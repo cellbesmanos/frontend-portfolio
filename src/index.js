@@ -9,13 +9,13 @@ import { Home, Projects } from "./routes";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <React.StrictMode>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-        </Route>
-      </Routes>
-    </React.StrictMode>
+    {/* <React.StrictMode> */}
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+      </Route>
+    </Routes>
+    {/* </React.StrictMode> */}
   </BrowserRouter>
 );

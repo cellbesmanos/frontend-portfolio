@@ -12,7 +12,7 @@ import {
 import "./Projects.css";
 
 export default function Projects() {
-  const [, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeProject, setActiveProject] = useState(() => getProject(0));
 
   useEffect(() => {
@@ -26,12 +26,17 @@ export default function Projects() {
   }, []);
 
   useEffect(() => {
-    setSearchParams({ name: activeProject.title, id: activeProject.id });
-  }, [setSearchParams, activeProject.title, activeProject.id]);
+    const id = parseInt(searchParams.get("id"));
+
+    if (id) {
+      setActiveProject(() => getProject(id));
+    } else {
+      setActiveProject(() => getProject(0));
+    }
+  }, [searchParams]);
 
   function updateActiveProject(id, name) {
     setSearchParams({ name, id });
-    setActiveProject(() => getProject(id));
   }
 
   return (
