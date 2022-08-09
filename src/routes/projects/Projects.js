@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { projects, getProject } from "../../project-data";
 
 import {
@@ -12,46 +13,45 @@ import {
 import "./Projects.css";
 
 export default function Projects() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [activeProject, setActiveProject] = useState(() => getProject(0));
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const activeProject = useRef(getProject(parseInt(id)));
 
   useEffect(() => {
     const title = document.querySelector("title");
 
     title.textContent = "Assiduous | Projects";
-
-    return () => {
-      title.textContent = "Assiduous";
-    };
   }, []);
 
   useEffect(() => {
-    const id = parseInt(searchParams.get("id"));
-
-    if (id) {
-      setActiveProject(() => getProject(id));
-    } else {
-      setActiveProject(() => getProject(0));
-    }
-  }, [searchParams]);
+    activeProject.current = getProject(parseInt(id));
+  }, [id]);
 
   function updateActiveProject(id, name) {
-    setSearchParams({ name, id });
+    navigate(`/projects/${id}/${name}`, { replace: true });
   }
 
   return (
-    <main className="Projects grid-container grid-container--projects">
+    <motion.main
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      className="Projects grid-container grid-container--projects"
+    >
       <Project>
-        <ProjectImage url={activeProject.image} alt={activeProject.title} />
+        <ProjectImage
+          url={activeProject.current.image}
+          alt={activeProject.current.title}
+        />
 
         <ProjectContent
-          id={activeProject.id}
-          title={activeProject.title}
-          description={activeProject.description}
-          technologies={activeProject.technologies}
-          highlights={activeProject.highlights}
-          github={activeProject.github}
-          url={activeProject.url}
+          id={activeProject.current.id}
+          title={activeProject.current.title}
+          description={activeProject.current.description}
+          technologies={activeProject.current.technologies}
+          highlights={activeProject.current.highlights}
+          github={activeProject.current.github}
+          url={activeProject.current.url}
         />
       </Project>
 
@@ -62,11 +62,11 @@ export default function Projects() {
             title: project.title,
           };
         })}
-        activeProject={activeProject.id}
+        activeProject={parseInt(id)}
         updateActiveProject={updateActiveProject}
       />
 
       <Socials />
-    </main>
+    </motion.main>
   );
 }

@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import "./Error.css";
 
 export default function Error() {
   return (
-    <main className="Error grid-container grid-container--error">
+    <motion.main
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="Error grid-container grid-container--error"
+    >
       <article className="flow">
         <h1 className="text-gray fs-500">
           <span className="block text-white fw-600 letter-spacing-3 fs-700">
@@ -23,6 +29,6 @@ export default function Error() {
           Back to home?
         </Link>
       </article>
-    </main>
+    </motion.main>
   );
 }

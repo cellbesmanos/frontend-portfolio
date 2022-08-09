@@ -1,22 +1,27 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { getProject } from "../../project-data";
 
 import { Socials } from "../../components";
 import "./Home.css";
 
 export default function Home() {
+  const firstProject = getProject(0);
+
   useEffect(() => {
     const title = document.querySelector("title");
 
     title.textContent = "Assiduous | Home";
-
-    return () => {
-      title.textContent = "Assiduous";
-    };
   }, []);
 
   return (
-    <main className="Home grid-container grid-container--home">
+    <motion.main
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="Home grid-container grid-container--home"
+    >
       <article className="Home__content flow">
         <header className="text-white uppercase fs-500 fw-500">
           <h1 className="Home__content-heading">
@@ -36,7 +41,7 @@ export default function Home() {
         </p>
 
         <Link
-          to="/projects"
+          to={`/projects/${firstProject.id}/${firstProject.title}`}
           className="call-to-action block uppercase fw-600 letter-spacing-1 text-gradient"
         >
           View projects
@@ -44,6 +49,6 @@ export default function Home() {
       </article>
 
       <Socials />
-    </main>
+    </motion.main>
   );
 }
