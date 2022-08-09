@@ -4,8 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
-import Home from "./routes/home/Home";
-import Projects from "./routes/projects/Projects";
+import { Home, Projects } from "./routes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { projects, getProject } from "../../project-data";
 
-import ProjectImage from "../../components/project-image/ProjectImage";
-import ProjectContent from "../../components/project-content/ProjectContent";
-import ProjectControls from "../../components/project-controls/ProjectControls";
-import Project from "../../components/project/Project";
-import Socials from "../../components/socials/Socials";
+import {
+  ProjectImage,
+  ProjectContent,
+  Project,
+  ProjectControls,
+  Socials,
+} from "../../components";
 import "./Projects.css";
 
 export default function Projects() {
