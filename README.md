@@ -1,5 +1,9 @@
-# My Portfolio!
+# My Portfolio website for my frontend work!
 
 ---
 
-Work in progress...
+## Built with:
+
+- React JS
+- React Router
+- Framer Motion
