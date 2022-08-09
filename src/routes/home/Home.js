@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { Socials } from "../../components";
 import "./Home.css";
 
 export default function Home() {
+  useEffect(() => {
+    const title = document.querySelector("title");
+
+    title.textContent = "Assiduous | Home";
+
+    return () => {
+      title.textContent = "Assiduous";
+    };
+  }, []);
+
   return (
     <main className="Home grid-container grid-container--home">
       <article className="Home__content flow">

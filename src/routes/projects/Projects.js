@@ -16,6 +16,16 @@ export default function Projects() {
   const [activeProject, setActiveProject] = useState(() => getProject(0));
 
   useEffect(() => {
+    const title = document.querySelector("title");
+
+    title.textContent = "Assiduous | Projects";
+
+    return () => {
+      title.textContent = "Assiduous";
+    };
+  }, []);
+
+  useEffect(() => {
     setSearchParams({ name: activeProject.title, id: activeProject.id });
   }, [setSearchParams, activeProject.title, activeProject.id]);
 
